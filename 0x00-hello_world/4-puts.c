@@ -1,11 +1,10 @@
 #include <stdio.h>
 /**
- *a program to print a text
- *returns 0
+ * main - a program to print a text
+ * Return: 0 (completed)
  */
-int main()
+int main(void)
 {
-	char op[]="Programming is like building a multilingual puzzle";
-	puts(op);
-	return 0;
+puts("\"Programming is like building a multilingual puzzle");
+return (0);
 }
