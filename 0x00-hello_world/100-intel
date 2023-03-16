@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -save-temps -S -c $CFILE
+export $CFILE | gcc -save-temps -S -c
