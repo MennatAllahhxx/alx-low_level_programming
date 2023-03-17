@@ -6,13 +6,13 @@
 int main(void)
 {
 int i = 0;
-char c = 'A';
+char c = 'a';
 while (i < 10)
 {
 putchar('0' + i);
 i++;
 }
-while (c < 'E')
+while (c < 'e')
 {
 putchar(c);
 c++; }
