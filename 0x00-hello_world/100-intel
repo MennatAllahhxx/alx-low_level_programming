@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -save-temps -S -c | find . -f *.s | cut -d"." -f1 | export $CFILE
+gcc -c -S -masm=intel > export $CFILE
