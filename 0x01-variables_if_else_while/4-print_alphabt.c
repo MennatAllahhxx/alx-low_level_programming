@@ -14,5 +14,6 @@ if (c != 'e' && c != 'q')
 
 c++;
 }
+putchar('\n');
 return (0);
 }
