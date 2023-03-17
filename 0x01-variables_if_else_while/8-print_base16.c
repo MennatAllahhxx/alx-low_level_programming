@@ -12,7 +12,7 @@ while (i < 10)
 putchar('0' + i);
 i++;
 }
-while (c < 'e')
+while (c < 'g')
 {
 putchar(c);
 c++; }
