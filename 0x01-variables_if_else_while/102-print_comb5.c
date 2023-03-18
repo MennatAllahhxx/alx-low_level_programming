@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-int i = 0,c = 0, c2, j = 0, k = 0, l = 0;
+int i = 0, c = 0, c2, j = 0, k = 0, l = 0;
 while (c <= 98)
 {
 i = (c / 10 + '0');
@@ -17,10 +17,10 @@ while (c2 <= 99)
 k = (c2 / 10 + '0');
 l = (c % 10 + '0');
 
-if (c <c2)
+if (c < c2)
 {
-putchar(i);
-putchar(j);
+putchar('0' + i);
+putchar('0' + j);
 putchar(32);
 putchar('0' + k);
 putchar('0' + l);
