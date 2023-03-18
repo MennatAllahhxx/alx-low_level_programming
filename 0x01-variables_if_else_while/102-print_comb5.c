@@ -18,10 +18,9 @@ putchar(32);
 putchar('0' + (q / 10));
 putchar('0' + (q % 10));
 if (p == 98 && q == 99)
-{
+	continue;
 putchar(44);
 putchar(32);
-}
 }
 }
 putchar('\n');
