@@ -14,14 +14,6 @@ while (j < 10)
 k = i;
 while (k < 10)
 {
-if (k < i)
-{
-l = j + 1;
-}
-else
-{
-l = 0;
-}
 while (l < 10)
 {
 if (!(i == k && j == l))
@@ -44,6 +36,7 @@ k++;
 j++;
 }
 i++;
+l = j + 1;
 }
 putchar('\n');
 return (0);
