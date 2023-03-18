@@ -6,15 +6,22 @@
  */
 int main(void)
 {
-int i = 0, j = 0, k = 0, l = 0;
+int i = 0, j = 0, k = 0, l = 0, t;
 while (i < 10)
 {
-l = j + 1;
 while (j < 10)
 {
 k = i;
 while (k < 10)
 {
+if (t != j)
+{
+l = j + 1;
+}
+else
+{
+l = 0;
+}
 while (l < 10)
 {
 if (!(i == k && j == l))
@@ -34,6 +41,7 @@ l++;
 }
 k++;
 }
+t = j;
 j++;
 }
 i++;
