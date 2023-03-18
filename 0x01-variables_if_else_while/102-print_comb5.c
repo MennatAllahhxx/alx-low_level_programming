@@ -9,10 +9,10 @@ int main(void)
 int i = 0, j = 0, k = 0, l = 0;
 while (i < 10)
 {
+l = j + 1;
 while (j < 10)
 {
 k = i;
-l = j + 1;
 while (k < 10)
 {
 while (l < 10)
