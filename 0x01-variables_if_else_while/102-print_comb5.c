@@ -14,10 +14,10 @@ while (j < 10)
 k = i;
 while (k < 10)
 {
-l = j +1;
-while(l < 10)
+l = j + 1;
+while (l < 10)
 {
-if (! (i == k && j == l))
+if (!(i == k && j == l))
 {
 putchar('0' + i);
 putchar('0' + j);
