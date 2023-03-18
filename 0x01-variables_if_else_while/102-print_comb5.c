@@ -12,9 +12,9 @@ while (i < 10)
 while (j < 10)
 {
 k = i;
+l = j + 1;
 while (k < 10)
 {
-l = j + 1;
 while (l < 10)
 {
 if (!(i == k && j == l))
