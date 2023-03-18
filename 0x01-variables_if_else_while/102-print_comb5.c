@@ -6,37 +6,33 @@
  */
 int main(void)
 {
-int i = 0, j = 0, k = 0, l = 0;
-while (i < 10)
+int i = 0,c = 0, c2, j = 0, k = 0, l = 0;
+while (c <= 98)
 {
-while (j < 10)
+i = (c / 10 + '0');
+j = (c % 10 + '0');
+c2 = 0;
+while (c2 <= 99)
 {
-k = i;
-while (k < 10)
+k = (c2 / 10 + '0');
+l = (c % 10 + '0');
+
+if (c <c2)
 {
-while (l < 10)
-{
-if (!(i == k && j == l))
-{
-putchar('0' + i);
-putchar('0' + j);
+putchar(i);
+putchar(j);
 putchar(32);
 putchar('0' + k);
 putchar('0' + l);
-if ((i != 9) || (j != 8) || (k != 9) || (l != 9))
+if (c != 98)
 {
 putchar(44);
 putchar(32);
 }
 }
-l++;
+c2++;
 }
-k++;
-}
-j++;
-}
-i++;
-l = j + 1;
+c++;
 }
 putchar('\n');
 return (0);
