@@ -27,7 +27,7 @@ _putchar('\n');
 }
 else
 {
-for (j = 0; j < 10; j++)
+for (j = 0; j < 4; j++)
 {
 for (k = 0; k < 6; k++)
 {
