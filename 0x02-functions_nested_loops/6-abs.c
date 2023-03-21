@@ -11,5 +11,5 @@ if (i >= 0)
 	s = i;
 else
 	s = i * (-1);
-return s;
+return (s);
 }
