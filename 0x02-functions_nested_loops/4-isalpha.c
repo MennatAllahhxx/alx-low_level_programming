@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _islower - a function to return 1 if c
+ * _isalpha - a function to return 1 if c
  * @c: a parameter
  * Return: 1 if alphabet. 0 otherwise.
  */
