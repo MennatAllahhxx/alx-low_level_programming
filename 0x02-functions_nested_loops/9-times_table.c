@@ -11,7 +11,9 @@ for (j = 0; j < 10; j++)
 {
 s = i * j;
 if (s < 10)
-{
+{ 
+if (j != 0)
+	_putchar(32);
 _putchar(s + '0');
 }
 else
@@ -29,9 +31,8 @@ _putchar(32);
 }
 else
 {
-_putchar(36);
-}
-}
 _putchar('\n');
+}
+}
 }
 }
