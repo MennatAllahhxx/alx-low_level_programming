@@ -5,12 +5,13 @@
  */
 int main(void)
 {
-unsigned int i = 0, c = 0, a = 1, b= 2;
-printf("%d, %d", a, b);
-while(i < 48)
+long c = 0, a = 1, b = 2;
+int i;
+printf("%ld, %ld", a, b);
+while (i < 48)
 {
 c = a + b;
-printf(", %d", c);
+printf(", %ld", c);
 a = b;
 b = c;
 i++;
