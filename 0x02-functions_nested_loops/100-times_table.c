@@ -12,7 +12,8 @@ for (i = 0; i <= n; i++)
 for (j = 0; j <= n; j++)
 {s = i * j;
 if (s < 10)
-{ if (j != 0)
+{ 
+if (j != 0)
 { _putchar(32);
 _putchar(32);
 }
@@ -32,8 +33,7 @@ if (j < n)
 { _putchar(44);
 _putchar(32);
 }
-else
-	_putchar('\n');
+else _putchar('\n');
 }
 }
 }
