@@ -13,9 +13,10 @@ while (i < 15)
 if (i < 10)
 	s = i;
 else
-	s = i % 10;
-if (i > 9)
-	_putchar(49);
+{
+s = i % 10;
+_putchar(1 + '0');
+}
 _putchar(s + '0');
 i++;
 }
