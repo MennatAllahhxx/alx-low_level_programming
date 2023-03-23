@@ -5,17 +5,20 @@
  */
 void more_numbers(void)
 {
-int i = 0, j = 0, s;
+int i = 0, j = 0, s, l;
 while (j < 10)
 {
 while (i < 15)
 {
 if (i < 10)
-	s = i;
+{
+s = i;
+}
 else
 {
 s = i % 10;
-_putchar(1 + '0');
+l= i / 10;
+_putchar(l + '0');
 }
 _putchar(s + '0');
 i++;
