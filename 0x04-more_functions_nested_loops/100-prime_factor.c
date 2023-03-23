@@ -5,7 +5,7 @@
  */
 int main(void)
 {
-unsigned long i, j, s, Prime_num;
+unsigned long int i, j, s, Prime_num;
 for (i = 2; i <= 612852475143; i++)
 {
 if (612852475143 % i == 0)
@@ -25,6 +25,6 @@ s = i;
 }
 }
 }
-printf("%lu", s);
+printf("%lu\n", s);
 return (0);
 }
