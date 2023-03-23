@@ -7,7 +7,7 @@
 void print_numbers(void)
 {
 int i;
-while(i <= 9)
+while (i <= 9)
 {
 printf("%d", i);
 i++;
