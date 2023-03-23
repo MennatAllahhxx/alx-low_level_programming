@@ -17,7 +17,7 @@ s = i;
 else
 {
 s = i % 10;
-l= i / 10;
+l = i / 10;
 _putchar(l + '0');
 }
 _putchar(s + '0');
