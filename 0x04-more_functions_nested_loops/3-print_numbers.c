@@ -9,8 +9,8 @@ void print_numbers(void)
 int i;
 while (i <= 9)
 {
-printf("%d", i);
+_putchar(i + '0');
 i++;
 }
-printf("\n");
+_putchar('\n');
 }
