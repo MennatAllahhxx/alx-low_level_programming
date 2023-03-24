@@ -7,8 +7,11 @@
 void print_number(int n)
 {
 int a, b, c, d, m;
+
 if (n >= 0)
-	m = n;
+{
+m = n;
+}
 else
 {
 m = -n;
@@ -42,5 +45,7 @@ _putchar(c + '0');
 _putchar(d + '0');
 }
 else
-	_putchar(m + '0');
+{
+_putchar(m + '0');
+}
 }
