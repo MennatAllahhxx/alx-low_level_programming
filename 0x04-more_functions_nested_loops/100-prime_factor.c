@@ -5,26 +5,17 @@
  */
 int main(void)
 {
-unsigned long int i, j, s, Prime_num;
-for (i = 2; i <= 612852475143; i++)
+unsigned long int i, num = 612852475143;
+for (i = 3; i < 782849; i = i + 2)
 {
-if (612852475143 % i == 0)
+if (num % i == 0) 
 {
-Prime_num = 1;
-for (j = 2; j <= (i / 2); j = j + 2)
+if (num != i)
 {
-if (i % j == 0)
-{
-Prime_num = 0;
-break;
-}
-}
-if (Prime_num == 1)
-{
-s = i;
+num = num / i;
 }
 }
 }
-printf("%lu\n", s);
+printf("%lu\n", num);
 return (0);
 }
