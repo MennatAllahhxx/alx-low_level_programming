@@ -8,7 +8,7 @@ int main(void)
 unsigned long int i, num = 612852475143;
 for (i = 3; i < 782849; i = i + 2)
 {
-if (num % i == 0) 
+if (num % i == 0)
 {
 if (num != i)
 {
