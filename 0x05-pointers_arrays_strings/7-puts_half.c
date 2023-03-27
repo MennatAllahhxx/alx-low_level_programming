@@ -20,7 +20,7 @@ _putchar(str[i]);
 }
 else
 {
-n = (l - 1)/ 2;
+n = (l - 1) / 2;
 for (j = (l - n); j < l; j++)
 {
 _putchar(str[j]);
