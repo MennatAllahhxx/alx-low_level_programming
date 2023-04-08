@@ -13,5 +13,5 @@ for (m = 0; m < n; m++)
 {
 *(s + m) = b;
 }
-return(s);
+return (s);
 }
