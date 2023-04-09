@@ -9,13 +9,20 @@ int _sqrt_recursion(int n)
 if (n < 0)
 	return (-1);
 else
+	return (calsqrt(n, 1));
+}
+/**
+ * calsqrt - a fun
+ * @n: operand
+ * @i: operand
+ * Return: result
+ */
+int calsqrt(int n, int i)
 {
-int i;
-for (i = 0; (i * i) <= n; i++)
-{
-if ((i * i) == n)
+if (n == (i * i))
 	return (i);
-}
-return (-1);
-}
+else if (n > (i * i))
+	return (calsqrt(n, i + 1));
+else
+	return (-1);
 }
