@@ -36,5 +36,5 @@ if (i <= 1)
 if (*s != *(s + i - 1))
 	return (0);
 else
-	return (check(s + 1, i -2));
+	return (check(s + 1, i - 2));
 }
