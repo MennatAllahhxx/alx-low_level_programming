@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _pow_recusion - a fun
+ * _pow_recursion - a fun
  * @x: num
  * @y: power
  * Return: result
