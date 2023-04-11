@@ -19,7 +19,7 @@ while (s1[i] != '\0')
 	i++;
 while (s2[j] != '\0')
 	j++;
-a = malloc(1 * (i + j + 2));
+a = malloc(1 * (i + j + 1));
 if (a == NULL)
 	return (NULL);
 for (k = 0; k < i; k++)
