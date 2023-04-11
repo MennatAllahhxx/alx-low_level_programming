@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  * free_grid - a fun
- * @**grid: grid
+ * @grid: grid
  * @height: h
  * Return: nth
  */
