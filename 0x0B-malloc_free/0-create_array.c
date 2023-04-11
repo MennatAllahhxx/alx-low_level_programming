@@ -15,7 +15,7 @@ if (size == 0)
 	return (NULL);
 a = malloc(1 * size);
 if (a == NULL)
-	        return (NULL);
+	return (NULL);
 for (i = 0; i < size; i++)
 {
 a[i] = c;
