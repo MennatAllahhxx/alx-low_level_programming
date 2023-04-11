@@ -16,6 +16,7 @@ if (width <= 0 || height <= 0)
 a = calloc(height, sizeof(int *));
 if (a == NULL)
 {
+free(a);
 return (NULL);
 }
 for (i = 0; i < height; i++)
@@ -23,7 +24,7 @@ for (i = 0; i < height; i++)
 a[i] = calloc(width, sizeof(int));
 if (a[i] ==  NULL)
 {
-for (j = 0; j < i; j++)
+for (j = 0; j <= i; j++)
 	free(a[j]);
 free(a);
 return (NULL);
