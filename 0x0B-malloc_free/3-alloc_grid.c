@@ -29,7 +29,7 @@ for (j = 0; j <= i; j++)
 free(a);
 return (NULL);
 }
-for (j = 0; j <width; j++)
+for (j = 0; j < width; j++)
 	a[i][j] = 0;
 }
 return (a);
