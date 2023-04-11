@@ -13,7 +13,7 @@ int i, j;
 int **a;
 if (width <= 0 || height <= 0)
 	return (NULL);
-a = calloc(height, sizeof(int));
+a = calloc(height, sizeof(int *));
 if (a == NULL)
 	return (NULL);
 for (i = 0; i < height; i++)
@@ -23,7 +23,7 @@ if (a[i] ==  NULL)
 {
 for (j = 0; j < i; j++)
 	free(a[j]);
-free (a);
+free(a);
 return (NULL);
 }
 }
