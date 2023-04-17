@@ -3,12 +3,13 @@
 #include <stdio.h>
 #include <stdlib.h>
 /**
- * strcut dog - struct
+ * struct dog - struct
  * @name: 1st para
  * @age: 2nd para
  * @owner: 3rd para
+ * Description: sth
  */
-struct dog 
+struct dog
 {
 char *name;
 float age;
