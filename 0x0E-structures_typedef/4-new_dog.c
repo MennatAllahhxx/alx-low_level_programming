@@ -23,7 +23,7 @@ return (NULL);
 }
 for (i = 0; name[i] != '\0'; i++)
 	(*dd).name[i] = name[i];
-(*dd).name[i] = '\0';
+
 dd->owner = malloc(sizeof(owner) + 1);
 if (owner == NULL)
 {
@@ -33,7 +33,6 @@ return (NULL);
 }
 for (i = 0; owner[i] != '\0'; i++)
 	(*dd).owner[i] = owner[i];
-(*dd).owner[i] = '\0';
 dd->age = age;
 return (dd);
 }
