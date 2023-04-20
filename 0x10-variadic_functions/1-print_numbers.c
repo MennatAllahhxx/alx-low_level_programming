@@ -18,6 +18,6 @@ i = n;
 if (separator == NULL)
 	separator = "";
 while (i--)
-	printf("%d%s", va_arg(x, const unsigned int), i ? separator : "\n");
+	printf("%d%s", va_arg(x, int), i ? separator : "\n");
 va_end(x);
 }
