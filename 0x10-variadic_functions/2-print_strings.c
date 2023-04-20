@@ -14,6 +14,11 @@ char *y;
 va_list x;
 va_start(x, n);
 i = n;
+if (!n)
+{
+printf("\n");
+return;
+}
 while (i--)
 {
 y = va_arg(x, char*);
