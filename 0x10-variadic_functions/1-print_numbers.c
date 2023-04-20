@@ -22,7 +22,7 @@ while (i--)
 	else
 	{
 		printf("%d", va_arg(x, int));
-		if (~ i)
+		if (~i)
 			printf("\n");
 	}
 }
