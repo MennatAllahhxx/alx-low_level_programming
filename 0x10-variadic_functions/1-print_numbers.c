@@ -13,7 +13,7 @@ unsigned int i;
 va_list x;
 va_start(x, n);
 i = n;
-while (i--)
+while (--i)
 {
 	if (separator != NULL)
 		printf("%d%s", va_arg(x, int), i ? separator : "\n");
