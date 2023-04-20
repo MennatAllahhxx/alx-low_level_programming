@@ -13,6 +13,11 @@ unsigned int i;
 va_list x;
 va_start(x, n);
 i = n;
+if (n == 0)
+{
+printf("\n");
+return;
+}
 while (i--)
 {
 if (separator != NULL)
