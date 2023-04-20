@@ -15,14 +15,18 @@ va_start(x, n);
 i = n;
 while (i--)
 {
-	if (separator != NULL)
-		printf("%d%s", va_arg(x, int), i ? separator : "\n");
-	else
-	{
-		printf("%d", va_arg(x, int));
-		if (!i)
-			printf("\n");
-	}
+if (separator != NULL)
+{
+printf("%d%s", va_arg(x, int), i ? separator : "\n");
+}
+else
+{
+printf("%d", va_arg(x, int));
+if (!i)
+{
+printf("\n");
+}
+}
 }
 va_end(x);
 }
