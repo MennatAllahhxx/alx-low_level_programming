@@ -13,5 +13,6 @@ n = *head;
 free(n);
 }
 free(n);
+free(*head);
 *head = NULL;
 }
