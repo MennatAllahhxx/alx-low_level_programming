@@ -12,6 +12,6 @@ n = *head;
 *head = (*head)->next;
 free(n);
 }
-free(*head);
+free(n);
 *head = NULL;
 }
