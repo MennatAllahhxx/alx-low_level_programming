@@ -25,6 +25,8 @@ return (new);
 }
 for (i = 0; *head && i < idx - 1; i++)
 {
+if (!(*head)->next)
+	return (NULL);
 head = &(*head)->next;
 }
 if (!*head || !(*head)->next)
