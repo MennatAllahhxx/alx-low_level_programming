@@ -27,7 +27,7 @@ for (i = 0; *head && i < idx - 1; i++)
 {
 head = &(*head)->next;
 }
-if (!(*head && (*head)->next))
+if (!*head || !(*head)->next)
 {
 free(new);
 return (NULL);
