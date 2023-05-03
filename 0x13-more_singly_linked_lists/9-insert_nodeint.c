@@ -33,7 +33,7 @@ new->n = n;
 *head = new;
 return (new);
 }
-index**;
+idx++;
 temp = *head;
 for (i = 1; i < idx - 1 && temp->next; i++)
 	temp = temp->next;
