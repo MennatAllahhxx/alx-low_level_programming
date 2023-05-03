@@ -16,23 +16,23 @@ if (!head)
 new = malloc(sizeof(listint_t));
 if (!new)
 	return (NULL);
+for (i = 0; *head; i++)
+{
+if (i == idx)
+	break;
+head = &(*head)->next;
+}
+if (i != idx)
+	return (NULL);
+new = malloc(sizeof(listint_t));
+if (!new)
+	return (NULL);
 new->n = n;
 if (!idx)
 {
 new->next = *head;
 *head = new;
 return (new);
-}
-for (i = 0; *head && i < idx - 1; i++)
-{
-if (!(*head)->next)
-	return (NULL);
-head = &(*head)->next;
-}
-if (!*head || !(*head)->next)
-{
-free(new);
-return (NULL);
 }
 new->next = (*head)->next;
 (*head)->next = new;
