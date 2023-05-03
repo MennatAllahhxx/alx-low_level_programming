@@ -18,6 +18,15 @@ int n;
 struct listint_s *next;
 } listint_t;
 
+/**
+ * struct listint_safe - singly linked list
+ * @addy: integer
+ * @next: points to the next node
+ *
+ * Description: singly linked list node structure
+ *
+ */
+
 typedef struct listint_safe
 {
 const listint_t *addy;
