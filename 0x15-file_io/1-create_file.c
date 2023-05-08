@@ -14,7 +14,7 @@ if (!filename)
 fd = open(filename, O_CREAT | O_TRUNC | O_WRONLY, 0600);
 if (fd == -1)
 	return (-1);
-bywr = write(fd, text_content, sizeof(text_content));
+bywr = write(fd, text_content, sizeof(text_content) - 1);
 if (bywr == -1)
 	return (-1);
 return (1);
