@@ -8,14 +8,16 @@
 int main(int argc, char **argv)
 {
 char buf[1024];
-int fd1, fd2, byrd, bywr;
+int fd1, fd2;
+int byrd, bywr;
 if (argc != 3)
 {
 dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 exit(97);
 }
 fd1 = open(argv[1], O_RDONLY);
-if (fd1 == -1)
+byrd = read(fd1, buf, 1024);
+if (fd1 == -1 || byrd == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
@@ -26,21 +28,22 @@ if (fd2 == -1)
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 exit(99);
 }
-while ((byrd = read(fd1, buf, 1024)) > 0)
+while (byrd > 0)
 {
 bywr = write(fd2, buf, byrd);
-if (bywr == -1)
+if (fd2 == -1 || bywr  == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 exit(99);
 }
-}
+byrd = read(fd1, buf, 1024);
 if (byrd == -1)
 {
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
-if (close(fd1) == -1 || close(fd2) == -1)
+}
+if (close(fd1) || close(fd2) == -1)
 {
 if (close(fd1) == -1)
 	dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd1);
