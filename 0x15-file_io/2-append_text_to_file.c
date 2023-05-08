@@ -11,7 +11,7 @@ int fd;
 int bywr;
 if (!filename)
 	return (-1);
-fd = open(filename, O_APPEND);
+fd = open(filename, O_APPEND | O_WRONLY);
 if (fd == -1)
 	return (-1);
 if (!text_content)
