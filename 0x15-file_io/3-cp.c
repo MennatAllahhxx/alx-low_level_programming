@@ -23,7 +23,7 @@ dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
 fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
-if (!EOF)
+while (byrd > 0)
 {
 bywr = write(fd2, buf, byrd);
 if (fd2 == -1 || bywr  == -1)
