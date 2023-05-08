@@ -42,6 +42,8 @@ if (byrd == -1)
 dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 exit(98);
 }
+else if (!byrd)
+	break;
 }
 if (close(fd1) || close(fd2) == -1)
 {
