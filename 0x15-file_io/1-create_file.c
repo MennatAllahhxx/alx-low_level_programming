@@ -19,7 +19,7 @@ if (!text_content)
 close(fd);
 return (1);
 }
-bywr = write(fd, text_content, sizeof(text_content) - 2);
+bywr = write(fd, text_content, strlen(text_content));
 if (bywr == -1)
 {
 close(fd);
