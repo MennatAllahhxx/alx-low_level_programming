@@ -31,7 +31,7 @@ exit(99);
 while (byrd > 0)
 {
 bywr = write(fd2, buf, byrd);
-if (fd2 == -1 || bywr  == -1)
+if (fd2 == -1 || bywr  == -1 || byrd != bywr)
 {
 dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", argv[2]);
 exit(99);
