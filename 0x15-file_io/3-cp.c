@@ -2,10 +2,7 @@
 /**
  * err - a fun
  * @errtype: op
- * @fd1: op
- * @fd2: op
- * @file1: op
- * @file2: op
+ * @file: op
  * Return: sth
  */
 int err(int errtype, char *file)
@@ -45,18 +42,32 @@ if (fd1 == -1)
 	err(98, argv[1]);
 byrd = read(fd1, buf, 1024);
 if (byrd == -1)
-	err(98, argv[1]);
+{
+close(fd1);
+err(98, argv[1]);
+}
 fd2 = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 if (fd2 == -1)
-	err(99, argv[2]);
+{
+close(fd1);
+err(99, argv[2]);
+}
 while (byrd > 0)
 {
 bywr = write(fd2, buf, byrd);
 if (bywr  == -1 || byrd != bywr)
-	err(99, argv[2]);
+{
+close(fd1);
+close(fd2);
+err(99, argv[2]);
+}
 byrd = read(fd1, buf, 1024);
 if (byrd == -1)
-	err(98, argv[1]);
+{
+close(fd1);
+close(fd2);
+err(98, argv[1]);
+}
 }
 x = close(fd1);
 y = close(fd2);
