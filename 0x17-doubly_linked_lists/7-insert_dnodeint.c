@@ -34,7 +34,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 		tmp->next = node;
 		return (node);
 	}
-	else if (i == idx)
+	else if (i == (idx - 1) && !tmp)
 	{
 		node = add_dnodeint_end(h, n);
 		return (node);
