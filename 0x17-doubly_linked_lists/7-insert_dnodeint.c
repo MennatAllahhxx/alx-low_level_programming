@@ -20,16 +20,18 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 		return (node);
 	}
 	tmp = *h;
-	if (!tmp)
-		return (NULL);
-	node = malloc(sizeof(dlistint_t));
-	if (!node)
-		return (NULL);
-	for (i = 0; i < (idx - 1) && tmp; i++)
-		tmp = tmp->next;
-	node->n = n;
-	node->prev = tmp;
-	node->next = tmp->next;
-	tmp->next = node;
-	return (node);
+	for (i = 0; i < (idx -1) && tmp; i++)
+                tmp = tmp->next;
+	if (tmp)
+	{
+		node = malloc(sizeof(dlistint_t));
+		if (!node)
+			return (NULL);
+		node->n = n;
+		node->prev = tmp;
+		node->next = tmp->next;
+		tmp->next->prev = node;
+		tmp->next = node;
+		return (node);
+	}
 }
