@@ -22,7 +22,7 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h,
 	tmp = *h;
 	for (i = 0; i < (idx - 1) && tmp; i++)
 		tmp = tmp->next;
-	if (tmp && i == (idx -1))
+	if (tmp && i == (idx - 1))
 	{
 		node = malloc(sizeof(dlistint_t));
 		if (!node)
