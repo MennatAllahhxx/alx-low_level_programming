@@ -10,15 +10,15 @@
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
 	hash_node_t *item, *curr;
-	unsigned long int index = 0;
+	unsigned long int index;
 
 	item = (hash_node_t *)malloc(sizeof(hash_node_t));
-	if (!item || !ht || !key || !(*key))
+	if (!item || !ht || key == '\0' || *key == '\0')
 		return (0);
 	strcpy(item->key, key);
 	strcpy(item->value, value);
-	index = key_index((unsigned char *) key, ht->size);
-	if (ht->array[index])
+	index = key_index((unsigned char *)key, ht->size);
+	if (ht->array[index] != NULL)
 	{
 		curr =  ht->array[index];
 		while (curr != NULL)
