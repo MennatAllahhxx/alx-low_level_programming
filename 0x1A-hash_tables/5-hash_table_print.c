@@ -8,7 +8,6 @@ void hash_table_print(const hash_table_t *ht)
 {
 	unsigned long int index;
 	char *separator;
-	hsh_node_t *temp;
 
 	separator = "";
 
