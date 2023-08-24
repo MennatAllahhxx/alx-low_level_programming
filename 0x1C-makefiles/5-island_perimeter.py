@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+i!/usr/bin/python3
 """
 This is module '5-island_perimeter'
 
@@ -23,17 +23,17 @@ def island_perimeter(grid):
                 surr = 4
                 if c != (length - 1):
                     if grid[d][c + 1] == 1:
-                        surr -=1
+                        surr -= 1
                 if c != 0:
                     if grid[d][c - 1] == 1:
                         surr -= 1
-                if d != (height -1):
+                if d != (height - 1):
                     if grid[d + 1][c] == 1:
                         surr -= 1
                 if d != 0:
                     if grid[d - 1][c] == 1:
                         surr -= 1
-                perimeter +=surr
+                perimeter += surr
             c += 1
         d += 1
     return (perimeter)
